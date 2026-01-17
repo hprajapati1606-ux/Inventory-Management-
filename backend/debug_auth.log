@@ -1,0 +1,6 @@
+LOGIN ATTEMPT: admin / admin123
+USER NOT FOUND
+LOGIN ATTEMPT: admin / admin123
+USER FOUND: admin
+HASH: $pbkdf2-sha256$29000$p1SqNWbsHcNYy9k7R6hVig$Hi/DB9.GWT64vwL64MeqrMpeYjEw3JLh07rveqiDzJ8
+VALID: True
