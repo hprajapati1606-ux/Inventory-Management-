@@ -1,67 +1,194 @@
-# Inventory Management System
+# 📦 Inventory Management System
 
-A production-ready Inventory Management System built with FastAPI and React.
+A full-stack **Inventory Management System** built using **FastAPI (Backend)** and **React + Vite + Tailwind CSS (Frontend)**.
+This project provides a complete solution for managing products, inventory, orders, suppliers, customers, and reports with secure JWT authentication.
 
-## Features
-- **Dashboard**: Real-time overview of stock value, products, and orders.
-- **Products**: CRUD operations with stock tracking.
-- **Inventory**: Track stock movements (In/Out/Adjustments).
-- **Orders**: Create orders for customers that automatically deduct stock.
-- **Suppliers & Customers**: Manage registry.
-- **Authentication**: JWT-based Role-Based Access Control (Admin/Staff).
+---
 
-## Tech Stack
-- **Backend**: Python FastAPI, SQLAlchemy, SQLite (production-ready for Postgres).
-- **Frontend**: React (Vite), Tailwind CSS, Axios, Recharts, Lucide Icons.
+## 🚀 Features
 
-## Setup Instructions
+### 🔐 Authentication
+
+* JWT based authentication
+* Role-based access (Admin / Staff)
+* Protected frontend routes
+
+### 📊 Dashboard
+
+* Total products
+* Total stock value
+* Low stock alerts
+* Orders & revenue overview
+
+### 📦 Products
+
+* Add / Edit / Delete products
+* Supplier & category mapping
+* Stock quantity tracking
+
+### 🏬 Inventory
+
+* Stock IN / OUT movements
+* Low stock monitoring
+
+### 🧾 Orders
+
+* Create orders
+* Automatic stock deduction
+* Order status tracking
+
+### 🧑‍💼 Suppliers & Customers
+
+* Supplier management
+* Customer management
+
+### 📈 Reports
+
+* Aggregated dashboard statistics
+* API ready for future PDF / CSV exports
+
+---
+
+## 🛠 Tech Stack
 
 ### Backend
-1. Navigate to `backend`:
-   ```bash
-   cd backend
-   ```
-2. Create virtual environment and install dependencies:
-   ```bash
-   python -m venv venv
-   .\venv\Scripts\Activate
-   pip install -r requirements.txt
-   ```
-3. Initialize Database and Seed Data:
-   ```bash
-   python seed_data.py
-   ```
-   *Note: This creates `inventory.db` and default users.*
 
-4. Run Server:
-   ```bash
-   uvicorn app.main:app --reload --port 8000
-   ```
+* FastAPI
+* SQLAlchemy
+* SQLite (can be replaced with PostgreSQL)
+* JWT Authentication
 
 ### Frontend
-1. Navigate to `frontend`:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run Development Server:
-   ```bash
-   npm run dev
-   ```
-4. Open browser at `http://localhost:5173`.
 
-## Demo Credentials
-- **Admin**: `admin` / `admin123`
-- **Staff**: `staff` / `staff123`
+* React (Vite)
+* Tailwind CSS
+* Axios
+* Recharts
+* Lucide Icons
 
-## Project Structure
-- `backend/app`: FastAPI application core.
-  - `models.py`: Database tables.
-  - `routers/`: API endpoints.
-- `frontend/src`: React application.
-  - `components/`: Reusable UI.
-  - `pages/`: Application views.
-  - `context/`: Auth state management.
+---
+
+## 📂 Project Structure
+
+```
+Inventory-Management/
+│
+├── backend/
+│   ├── app/
+│   │   ├── core/
+│   │   ├── models/
+│   │   ├── routers/
+│   │   ├── schemas/
+│   │   └── main.py
+│   ├── seed_data.py
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── src/
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   └── App.jsx
+│   └── package.json
+│
+└── README.md
+```
+
+---
+
+## ⚙️ How to Run the Project (Step-by-Step)
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/hprajapati1606-ux/Inventory-Management-.git
+cd Inventory-Management-
+```
+
+---
+
+### 2️⃣ Backend Setup (FastAPI)
+
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\Activate
+pip install -r requirements.txt
+pip install email-validator
+```
+
+#### Seed Database (Demo Data)
+
+```bash
+python seed_data.py
+```
+
+#### Run Backend
+
+```bash
+uvicorn app.main:app --reload --port 8000
+```
+
+Backend URLs:
+
+* [http://127.0.0.1:8000](http://127.0.0.1:8000)
+* [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
+---
+
+### 3️⃣ Frontend Setup (React)
+
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
+
+Frontend URL:
+
+* [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🔑 Demo Login Credentials
+
+### Admin
+
+* Email: **[admin@example.com](mailto:admin@example.com)**
+* Password: **admin123**
+
+### Staff
+
+* Email: **[staff@example.com](mailto:staff@example.com)**
+* Password: **staff123**
+
+---
+
+## 🧪 Verified Functionality
+
+✔ Login works
+✔ JWT token stored and sent
+✔ Dashboard loads
+✔ Reports load
+✔ Products / Suppliers / Customers connected
+✔ Role-based access enforced
+
+---
+
+## 🌱 Future Enhancements
+
+* PDF / CSV report export
+* Docker deployment
+* PostgreSQL production database
+* Advanced role permissions
+* Automated testing
+
+---
+
+## 👨‍💻 Author
+
+**Hitesh Prajapati**
+GitHub: [https://github.com/hprajapati1606-ux](https://github.com/hprajapati1606-ux)
+
+⭐ If you like this project, please give it a star!
